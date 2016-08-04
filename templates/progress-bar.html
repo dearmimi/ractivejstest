@@ -1,0 +1,20 @@
+{{#each progressbars}}
+	<div class="progress-root">
+		<div id="progressbar" class="progress {{level > 100 ? 'red-bar' : 'green-bar'}}" style="width:{{level > 100 ? 100 : level}}%;">
+			<span class="progress-label">{{level}}%</span>
+		</div>
+	</div>
+{{/each}}
+
+<div id="progresslevel">
+	<select value='{{selectedBar}}'>
+		{{#each bars :index}}
+			<option value='{{index}}'>
+				{{name}}
+			</option>
+		{{/each}}
+	</select>
+	{{#each increments}}
+		<button on-click='increaseLevel(increment)'>{{increment > 0 ? '+' : ''}}{{increment}}</button>
+	{{/each}}
+</div>

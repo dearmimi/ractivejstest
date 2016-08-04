@@ -1,0 +1,45 @@
+s-bar {
+  position: relative;
+  width: 200px;
+  height: 40px;
+  border: 1px solid black;
+}
+.progress-bar-fill {
+  height: inherit;
+  background-color: green;
+  width: 200px;
+  border: 1px solid black;
+  text-align: center;
+}
+    
+.progress-bar-fill-red {
+  height: inherit;
+  background-color: red;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.progress-bar-empty {
+  height: inherit;
+  border: 1px solid black;
+  
+}
+.progress-label {
+  position: relative;
+  top: 3px;
+  left: 5px;
+  color: #000;
+}
+
+
+input[type=range] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  /* essentially making range slider invisible */
+  opacity: 0;
+}
+

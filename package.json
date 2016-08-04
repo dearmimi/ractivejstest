@@ -1,0 +1,15 @@
+{
+  "name": "ractivejs-progessbar-test",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "~0.4.4",
+    "grunt-contrib-compass": "latest",
+    "grunt-contrib-cssmin": "^1.0.1",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-less": "latest",
+    "grunt-contrib-sass": "latest",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "jshint-stylish": "^2.2.0"
+  }
+}
