@@ -1,0 +1,48 @@
+<html>
+<head>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<h1>Ractive test</h1>
+
+<!--
+       1. This is the element we'll render our Ractive to.
+  -->
+<div id='container'></div>
+<script src='js/progressbar.js'></script>
+<script id="template" type='text/ractive'>
+    
+    <h1>Progress Bars Demo.</h1>
+    
+    {{#each progressbars}}
+        <p>Progress Bar</p>
+        {{#if value < 0}}
+        		<div class="progress-bar-empty" style="width: 50%">
+                <span class="progress-label">{{value}}%</span>
+            </div>
+        {{else}}
+        		{{#if value <= 100}}
+                <div class="progress-bar-fill" style="width: {{value/2}}%">
+                    <span class="progress-label">{{value}}%</span>
+                </div>
+        		{{/if}}
+        {{/if}}
+
+        {{#if value>100}}
+            <div class="progress-bar-fill-red" style="width: 50%">
+                <span class="progress-label">{{value}}%</span>
+            </div>
+        {{/if}}
+    {{/each}}
+
+    <select value='{{selectedProgress}}'>
+        <option selected disabled>Select something</option>
+        {{#each progressbars :index}}
+            <option value='{{index}}'>{{name}}</option>
+        {{/each}}
+    </select>
+
+    {{#each amounts}}
+        <button disabled='{{selectedProgress == null}}' on-click='adjust(this)'>{{this > 0 ? '+' : ''}}{{this}}</button>
+    {{/each}}
+</script>
+</html>
